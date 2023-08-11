@@ -15,7 +15,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-![alt text](https://github.com/Abd0-M0stafa/abdelrahman_mostafa_iti_2023/blob/main/task%202%20%3D%20quiz%20app/1.PNG)
-![alt text](https://github.com/Abd0-M0stafa/abdelrahman_mostafa_iti_2023/blob/main/task%202%20%3D%20quiz%20app/2.PNG)
-![alt text](https://github.com/Abd0-M0stafa/abdelrahman_mostafa_iti_2023/blob/main/task%202%20%3D%20quiz%20app/3.PNG)
-![alt text](https://github.com/Abd0-M0stafa/abdelrahman_mostafa_iti_2023/blob/main/task%202%20%3D%20quiz%20app/4.PNG)
+
