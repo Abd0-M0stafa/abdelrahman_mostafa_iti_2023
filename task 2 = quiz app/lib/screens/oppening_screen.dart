@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/login_screen.dart';
 import 'package:quiz_app/used_widgets/coponents.dart';
 
-class Oppening_Screen extends StatelessWidget {
-  const Oppening_Screen({super.key});
+class OppeningScreen extends StatelessWidget {
+  const OppeningScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,14 @@ class Oppening_Screen extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff4caf50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const Loginscreen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   'Start',
                 ),

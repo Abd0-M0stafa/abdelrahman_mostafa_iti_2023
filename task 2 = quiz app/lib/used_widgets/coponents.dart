@@ -14,3 +14,35 @@ Widget title(
     ),
   );
 }
+
+Widget container(
+    {required String text,
+    required String font,
+    required double size,
+    required Color color,
+    required onpressed}) {
+  return Center(
+    child: SizedBox(
+      height: 75,
+      width: 350,
+      child: ElevatedButton(
+        onPressed: onpressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xff2c752e),
+          elevation: 8,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontFamily: font,
+            fontSize: size,
+            color: color,
+          ),
+        ),
+      ),
+    ),
+  );
+}

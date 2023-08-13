@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/categories.dart';
 
 class Loginscreen extends StatefulWidget {
   const Loginscreen({super.key});
@@ -32,7 +33,7 @@ class LoginscreenState extends State<Loginscreen> {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),
                     topRight: Radius.circular(50)),
-                color: const Color(0xffefecec),
+                color: Color(0xffefecec),
               ),
               width: MediaQuery.of(context).size.width * 1,
               height: MediaQuery.of(context).size.height * 0.65,
@@ -99,14 +100,22 @@ class LoginscreenState extends State<Loginscreen> {
                     child: SizedBox(
                       width: 170,
                       child: ElevatedButton(
-                        onPressed: () {},
-                        child: const Text('Login'),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) =>
+                                  const Catigories(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff4caf50),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
+                        child: const Text('Login'),
                       ),
                     ),
                   ),
