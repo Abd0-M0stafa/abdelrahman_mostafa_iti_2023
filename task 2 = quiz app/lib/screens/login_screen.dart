@@ -101,7 +101,7 @@ class LoginscreenState extends State<Loginscreen> {
                       width: 170,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute<void>(
                               builder: (BuildContext context) =>

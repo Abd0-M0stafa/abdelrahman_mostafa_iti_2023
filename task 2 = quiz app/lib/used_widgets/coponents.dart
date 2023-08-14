@@ -46,3 +46,32 @@ Widget container(
     ),
   );
 }
+
+Widget costumContainer({
+  required String text,
+  required onpressed,
+}) {
+  return Center(
+    child: SizedBox(
+      height: 50,
+      width: 300,
+      child: ElevatedButton(
+        onPressed: onpressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xff2c752e),
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    ),
+  );
+}
