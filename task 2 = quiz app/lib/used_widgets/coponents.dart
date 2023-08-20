@@ -20,6 +20,7 @@ Widget container(
     required String font,
     required double size,
     required Color color,
+    required Color backcolor,
     required onpressed}) {
   return Center(
     child: SizedBox(
@@ -28,7 +29,7 @@ Widget container(
       child: ElevatedButton(
         onPressed: onpressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xff2c752e),
+          backgroundColor: backcolor,
           elevation: 8,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60),

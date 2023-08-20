@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screens/oppening_screen.dart';
-import 'package:quiz_app/used_widgets/coponents.dart';
+import '../Global/quiz_app_data.dart';
 
 class ScoreScreen extends StatelessWidget {
-  const ScoreScreen({super.key});
+  final int score;
+  final int totalnumofquestions;
+  const ScoreScreen(
+      {super.key, required this.score, required this.totalnumofquestions});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +21,8 @@ class ScoreScreen extends StatelessWidget {
             child: RichText(
               text: TextSpan(
                   style: DefaultTextStyle.of(context).style,
-                  children: const [
-                    TextSpan(
+                  children: [
+                    const TextSpan(
                       text: 'Hallo, ',
                       style: TextStyle(
                           fontFamily: 'Pacifico',
@@ -28,8 +31,8 @@ class ScoreScreen extends StatelessWidget {
                           decoration: TextDecoration.none),
                     ),
                     TextSpan(
-                      text: 'Abdo \n',
-                      style: TextStyle(
+                      text: '${userNameControler.text} \n',
+                      style: const TextStyle(
                         fontStyle: FontStyle.italic,
                         fontFamily: 'Pacifico',
                         fontSize: 35,
@@ -41,8 +44,8 @@ class ScoreScreen extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'Your Score is r / r',
-                      style: TextStyle(
+                      text: 'Your Score is $score / $totalnumofquestions',
+                      style: const TextStyle(
                           fontFamily: 'Pacifico',
                           fontSize: 35,
                           color: Colors.black,
@@ -54,19 +57,36 @@ class ScoreScreen extends StatelessWidget {
           const Spacer(
             flex: 2,
           ),
-          container(
-            text: 'Reset Quiz',
-            font: 'Pacifico',
-            size: 35,
-            color: Colors.white,
-            onpressed: () {
-              Navigator.pushAndRemoveUntil<void>(
-                context,
-                MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const OppeningScreen()),
-                (Route<dynamic> route) => false,
-              );
-            },
+          Center(
+            child: SizedBox(
+              height: 75,
+              width: 350,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const OppeningScreen(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xff2c752e),
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(60),
+                  ),
+                ),
+                child: const Text(
+                  'Reset Quiz',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 35,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ),
           const Spacer(
             flex: 1,
